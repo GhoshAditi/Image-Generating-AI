@@ -1,54 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Innovate Ninjas AI</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-        #image {
-            filter: brightness(100%) contrast(100%) saturate(100%);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnoNinjas AIt</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="ai.js" defer></script>
 </head>
 <body>
-    <h1>InnoNinja AI</h1>
-    <div class="container1">
-    <form id="prompt-form">
-        
-        <label for="input">Enter your prompt:</label><br>
-        <input type="text" id="input" name="input"><br>
-        <input type="button" id="button" value="Generate Image">
-    </form>
-</div>
-<div class="container2">
-    <img id="image" src="" alt="Generated image will appear here">
+  <section class="image-generator">
+    <div class="content">
+      <h1>InnoNinja AI</h1>
+      <form action="#" class="generate-form">
+        <input id="input" class="prompt-input" type="text" placeholder="Describe what you want to see" required>
+        <div class="controls">
+          <select class="img-quantity">
+            <option value="1">1 Image</option>
+          </select>
+          <button id="button" type="button" class="generate-btn">Generate</button>
+        </div>
+      </form>
     </div>
-    <div class="container3">
-    <form id="image-edit-form">
-        <label for="brightness">Brightness:</label>
-        <input type="range" id="brightness" name="brightness" min="0" max="200" value="100"><br>
-        <label for="contrast">Contrast:</label>
-        <input type="range" id="contrast" name="contrast" min="0" max="200" value="100"><br>
-        <label for="saturation">Saturation:</label>
-        <input type="range" id="saturation" name="saturation" min="0" max="200" value="100">
-    </form>
-    </div>
-    <script src="ai.js"></script>
-    <script>
-        const image = document.getElementById('image');
-        const brightness = document.getElementById('brightness');
-        const contrast = document.getElementById('contrast');
-        const saturation = document.getElementById('saturation');
-
-        function updateImageFilter() {
-            image.style.filter = `brightness(${brightness.value}%) contrast(${contrast.value}%) saturate(${saturation.value}%)`;
-        }
-
-        brightness.addEventListener('input', updateImageFilter);
-        contrast.addEventListener('input', updateImageFilter);
-        saturation.addEventListener('input', updateImageFilter);
-    </script>
+  </section>
+  <section class="image-gallery">
+    <div class="img-card"><img id="image" src="images/img-1.jpg" alt="image"></div>
+    <!-- Add more img-card divs as needed... -->
+  </section>
 </body>
-</html>
+</html
