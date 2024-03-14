@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>Innovate Ninjas AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
         #image {
             filter: brightness(100%) contrast(100%) saturate(100%);
@@ -9,21 +13,28 @@
     </style>
 </head>
 <body>
-    <h1>InnoNinja AI v69</h1>
+    <h1>InnoNinja AI</h1>
+    <div class="container1">
     <form id="prompt-form">
+        
         <label for="input">Enter your prompt:</label><br>
         <input type="text" id="input" name="input"><br>
         <input type="button" id="button" value="Generate Image">
     </form>
+</div>
+<div class="container2">
     <img id="image" src="" alt="Generated image will appear here">
+    </div>
+    <div class="container3">
     <form id="image-edit-form">
-        <label for="brightness">Brihtness:</label>
+        <label for="brightness">Brightness:</label>
         <input type="range" id="brightness" name="brightness" min="0" max="200" value="100"><br>
         <label for="contrast">Contrast:</label>
         <input type="range" id="contrast" name="contrast" min="0" max="200" value="100"><br>
         <label for="saturation">Saturation:</label>
         <input type="range" id="saturation" name="saturation" min="0" max="200" value="100">
     </form>
+    </div>
     <script src="ai.js"></script>
     <script>
         const image = document.getElementById('image');
