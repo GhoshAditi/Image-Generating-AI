@@ -3,7 +3,7 @@ const inputTxt = document.getElementById("input");
 const image = document.getElementById("image");
 const button = document.getElementById("button");
 
-async function query(data) {
+async function query() {
     const response = await fetch(
         "https://api-inference.huggingface.co/models/Melonie/text_to_image_finetuned",
         {
@@ -16,19 +16,6 @@ async function query(data) {
     return result;
 }
 
-function adjustFormLayout() {
-    if (window.innerWidth >= 600) {
-        form.style.flexDirection = 'row';
-        form.style.justifyContent = 'space-between';
-    } else {
-        form.style.flexDirection = 'column';
-        form.style.justifyContent = 'normal';
-    }
-}
-window.addEventListener('resize', adjustFormLayout);
-
-// Call the function once to set the initial layout
-adjustFormLayout();
 button.addEventListener("click", async function () {
     try {
         const response = await query();
