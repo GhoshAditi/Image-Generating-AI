@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Innovate Ninjas AI</title>
+    <style>
+        #image {
+            filter: brightness(100%) contrast(100%) saturate(100%);
+        }
+    </style>
+</head>
+<body>
+    <h1>InnoNinja AI v69</h1>
+    <form id="prompt-form">
+        <label for="input">Enter your prompt:</label><br>
+        <input type="text" id="input" name="input"><br>
+        <input type="button" id="button" value="Generate Image">
+    </form>
+    <img id="image" src="" alt="Generated image will appear here">
+    <form id="image-edit-form">
+        <label for="brightness">Brihtness:</label>
+        <input type="range" id="brightness" name="brightness" min="0" max="200" value="100"><br>
+        <label for="contrast">Contrast:</label>
+        <input type="range" id="contrast" name="contrast" min="0" max="200" value="100"><br>
+        <label for="saturation">Saturation:</label>
+        <input type="range" id="saturation" name="saturation" min="0" max="200" value="100">
+    </form>
+    <script src="ai.js"></script>
+    <script>
+        const image = document.getElementById('image');
+        const brightness = document.getElementById('brightness');
+        const contrast = document.getElementById('contrast');
+        const saturation = document.getElementById('saturation');
+
+        function updateImageFilter() {
+            image.style.filter = `brightness(${brightness.value}%) contrast(${contrast.value}%) saturate(${saturation.value}%)`;
+        }
+
+        brightness.addEventListener('input', updateImageFilter);
+        contrast.addEventListener('input', updateImageFilter);
+        saturation.addEventListener('input', updateImageFilter);
+    </script>
+</body>
+</html>
