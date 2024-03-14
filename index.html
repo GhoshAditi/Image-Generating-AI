@@ -6,6 +6,11 @@
   <title>InnoNinjas AIt</title>
   <link rel="stylesheet" href="style.css">
   <script src="ai.js" defer></script>
+  <style>
+    .loading-text {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <section class="image-generator">
@@ -23,7 +28,10 @@
     </div>
   </section>
   <section class="image-gallery">
-    <div class="img-card"><img id="image" src="images/img-1.jpg" alt="image"></div>
+    <div id="imageContainer" class="img-card">
+      <img id="image" src="images/img-1.jpg" alt="image">
+      <div id="loadingText" class="loading-text">Please wait...</div>
+    </div>
     <!-- Add more img-card divs as needed... -->
   </section>
   <div id="brightness-control">
@@ -35,4 +43,4 @@
     <input type="range" id="opacity" name="opacity" min="0" max="2" step="0.1" value="1">
   </div>
 </body>
-</html
+</html>

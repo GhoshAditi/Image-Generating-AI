@@ -279,3 +279,6 @@ input[type="range"]:hover {
   background-position: center;
   
 }
+.loading-text {
+  color: black;
+}
