@@ -1,4 +1,4 @@
-const token = "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";
+const token = "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";
 const inputTxt = document.getElementById("input");
 const image = document.getElementById("image");
 const button = document.getElementById("button");
