@@ -17,37 +17,37 @@
     <img src="loader.gif" alt="Loading...">
   </div>
   <main>
-  <section class="image-generator">
-    <div class="content">
-      <h1>InnoNinja AI</h1>
-      <form action="#" class="generate-form">
-        <input id="input" class="prompt-input" type="text" placeholder="Describe what you want to see" required>
-        <div class="controls">
-          <select class="img-quantity">
-            <option value="1">Image</option>
-          </select>
-          <button id="button" type="button" class="generate-btn">Generate</button>
-        </div>
-      </form>
-    </div>
-  </section>
-  <section class="image-gallery">
-    <div id="imageContainer" class="img-card">
-      <div id="loadingText" class="loading-text">
-        <img src="imgload.gif" alt="Loading...">
-        <img id="image" src="" alt="Generated image">
+    <section class="image-generator">
+      <div class="content">
+        <h1>InnoNinja AI</h1>
+        <form action="#" class="generate-form">
+          <input id="input" class="prompt-input" type="text" placeholder="Describe what you want to see" required>
+          <div class="controls">
+            <select class="img-quantity">
+              <option value="1">Image</option>
+            </select>
+            <button id="button" type="button" class="generate-btn">Generate</button>
+          </div>
+        </form>
       </div>
+    </section>
+    <section class="image-gallery">
+      <div id="imageContainer" class="img-card">
+        <div id="loadingText" class="loading-text">
+          <img src="imgload.gif" alt="Loading...">
+        </div>
+        <img id="image" src="" alt="Generated image"> <!-- Move this line outside the loading text div -->
+      </div>
+      <!-- Add more img-card divs as needed... -->
+    </section>
+    <div id="brightness-control">
+      <label for="brightness">Brightness:</label>
+      <input type="range" id="brightness" name="brightness" min="0" max="2" step="0.1" value="1">
+      <label for="size">Size:</label>
+      <input type="range" id="size" name="size" min="0" max="2" step="0.1" value="1">
+      <label for="opacity">Opacity:</label>
+      <input type="range" id="opacity" name="opacity" min="0" max="2" step="0.1" value="1">
     </div>
-    <!-- Add more img-card divs as needed... -->
-  </section>
-  <div id="brightness-control">
-    <label for="brightness">Brightness:</label>
-    <input type="range" id="brightness" name="brightness" min="0" max="2" step="0.1" value="1">
-    <label for="size">Size:</label>
-    <input type="range" id="size" name="size" min="0" max="2" step="0.1" value="1">
-    <label for="opacity">Opacity:</label>
-    <input type="range" id="opacity" name="opacity" min="0" max="2" step="0.1" value="1">
-  </div>
   </main>
   <script>window.addEventListener('load', function () {
     setTimeout(function () {

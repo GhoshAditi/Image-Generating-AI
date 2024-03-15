@@ -1,4 +1,4 @@
-const token = "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";
+const token = "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";
     const inputTxt = document.getElementById("input");
     const image = document.getElementById("image");
     const button = document.getElementById("button");
@@ -9,7 +9,7 @@ const token = "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";
 
         try {
             const response = await fetch(
-                "https://api-inference.huggingface.co/models/Melonie/text_to_image_finetuned",
+                "https://api-inference.huggingface.co/models/SaiRaj03/Text_To_Image",
                 {
                     headers: { Authorization: `Bearer ${token}` },
                     method: "POST",
