@@ -13,6 +13,10 @@
   </style>
 </head>
 <body>
+  <div id="loader">
+    <img src="loader.gif" alt="Loading...">
+  </div>
+  <main>
   <section class="image-generator">
     <div class="content">
       <h1>InnoNinja AI</h1>
@@ -29,8 +33,10 @@
   </section>
   <section class="image-gallery">
     <div id="imageContainer" class="img-card">
-      <img id="image" src="images/img-1.jpg" alt="image">
-      <div id="loadingText" class="loading-text">Please wait...</div>
+      <div id="loadingText" class="loading-text">
+        <img src="imgload.gif" alt="Loading...">
+        <img id="image" src="" alt="Generated image">
+      </div>
     </div>
     <!-- Add more img-card divs as needed... -->
   </section>
@@ -42,5 +48,15 @@
     <label for="opacity">Opacity:</label>
     <input type="range" id="opacity" name="opacity" min="0" max="2" step="0.1" value="1">
   </div>
+  </main>
+  <script>window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.getElementById('loader').style.display = 'none';
+      document.querySelector('main').style.display = 'block';
+    }, 2000);
+    document.getElementById('button').addEventListener('click', function() {
+      document.getElementById('loadingText').style.display = 'block';
+    });
+  });</script>
 </body>
 </html>
