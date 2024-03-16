@@ -40,8 +40,18 @@
       </div>
       <!-- Add more img-card divs as needed... -->
     </section>
+    <div id="filter-control">
+      <label for="filter">Filter:</label>
+      <select id="filter" class="filter-select">
+        <option value="none">None</option>
+        <option value="grayscale">Grayscale</option>
+        <option value="sepia">Sepia</option>
+        <option value="blur">Blur</option>
+        <!-- Add more filter options as needed -->
+      </select>
+    </div>
     <div id="brightness-control">
-      <label for="brightness">Brightness:</label>
+      <label for="brightness">Exposure:</label>
       <input type="range" id="brightness" name="brightness" min="0" max="2" step="0.1" value="1">
       <label for="size">Size:</label>
       <input type="range" id="size" name="size" min="0" max="2" step="0.1" value="1">

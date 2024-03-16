@@ -372,3 +372,45 @@ html, body {
   max-width: 100%; /* Make sure the loading image doesn't overflow the loader */
   max-height: 100%;
 }
+
+
+#filter-control {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#filter-control label {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #f8f1f1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border-radius: 20px; /* Rounded corners */
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #555;
+  outline: none; /* Remove outline */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  background-color: #e0e0e0;
+  border-color: #999;
+}
+
+.filter-select option {
+  padding: 8px 12px;
+}
+
+#brightness-control,
+#filter-control {
+  margin-bottom: 20px;
+}

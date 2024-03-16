@@ -67,6 +67,33 @@ const token = "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";
           }
         });
       });
+      document.getElementById('button').addEventListener('click', function() {
+        var selectedFilter = document.getElementById('filter').value;
+        applyFilter(selectedFilter);
+        document.getElementById('loadingText').style.display = 'block';
+      });
+      
+      function applyFilter(filter) {
+        var image = document.getElementById('image');
+        switch(filter) {
+          case 'none':
+            image.style.filter = 'none';
+            break;
+          case 'grayscale':
+            image.style.filter = 'grayscale(100%)';
+            break;
+          case 'sepia':
+            image.style.filter = 'sepia(100%)';
+            break;
+          case 'blur':
+            image.style.filter = 'blur(2px)';
+            break;
+          // Add more cases for other filter options
+          default:
+            image.style.filter = 'none';
+            break;
+        }
+      }
     document.addEventListener("DOMContentLoaded", function() {
         const image = document.getElementById('image');
         const brightnessControl = document.getElementById('brightness');
