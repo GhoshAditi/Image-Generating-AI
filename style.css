@@ -8,7 +8,11 @@
   font-family: "Poppins", sans-serif;
 }
 body{
-    background-color: #121212;
+   /*background-color: #020203;*/
+   background: url("giphy.gif");
+   background-size: cover;
+   background-position: center;
+   
     color: #fff;
     
 
@@ -139,7 +143,6 @@ h1 span {
   justify-content: center;
   background-size: cover;
   background-position: center;
- 
 }
 
 .image-gallery .img-card {
@@ -413,4 +416,10 @@ html, body {
 #brightness-control,
 #filter-control {
   margin-bottom: 20px;
+}
+.image-generator,
+.generate-form,
+.image-gallery .img-card,
+.context {
+  border: 0.2vh solid #000;
 }

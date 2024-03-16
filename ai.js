@@ -1,5 +1,5 @@
 
-const token = "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";
+    const token = "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";
     const inputTxt = document.getElementById("input");
     const image = document.getElementById("image");
     const button = document.getElementById("button");
@@ -7,7 +7,7 @@ const token = "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";
     const animatedText = document.getElementById('animated-text');
     const input = document.getElementById('input');
     
-
+    
 
     for (let i = 0; i < text.length; i++) {
     const span = document.createElement('span');
