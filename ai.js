@@ -22,7 +22,7 @@ const token = "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";
 
         try {
             const response = await fetch(
-                "https://api-inference.huggingface.co/models/SaiRaj03/Text_To_Image",
+              "https://api-inference.huggingface.co/models/Melonie/text_to_image_finetuned",
                 {
                     headers: { Authorization: `Bearer ${token}` },
                     method: "POST",
