@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnoNinjas AIt</title>
+  <title>InnoNinjas AI</title>
   <link rel="stylesheet" href="style.css">
   <script src="ai.js" defer></script>
   <style>
@@ -19,9 +19,9 @@
   <main>
     <section class="image-generator">
       <div class="content">
-        <h1>InnoNinja AI</h1>
+        <h1 id="animated-text">InnoNinja AI</h1>
         <form action="#" class="generate-form">
-          <input id="input" class="prompt-input" type="text" placeholder="Describe what you want to see" required>
+          <input id="input" class="prompt-input" type="text" placeholder="Describe what you want to see">
           <div class="controls">
             <select class="img-quantity">
               <option value="1">Image</option>
@@ -36,7 +36,7 @@
         <div id="loadingText" class="loading-text">
           <img src="imgload.gif" alt="Loading...">
         </div>
-        <img id="image" src="" alt="Generated image"> <!-- Move this line outside the loading text div -->
+        <img id="image" src="" alt="Generated image" onload="this.parentElement.classList.remove('loading')">> <!-- Move this line outside the loading text div -->
       </div>
       <!-- Add more img-card divs as needed... -->
     </section>

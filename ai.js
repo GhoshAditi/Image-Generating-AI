@@ -1,8 +1,21 @@
+
 const token = "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";
     const inputTxt = document.getElementById("input");
     const image = document.getElementById("image");
     const button = document.getElementById("button");
+    const text = 'InnoNinja AI';
+    const animatedText = document.getElementById('animated-text');
+    const input = document.getElementById('input');
+    
 
+
+    for (let i = 0; i < text.length; i++) {
+    const span = document.createElement('span');
+    span.textContent = text[i];
+    span.style.animationDelay = `${i * 0.1}s`;
+    animatedText.appendChild(span);
+}
+    
     async function query() {
         // Show loading text
         document.getElementById('loadingText').style.display = 'block';
@@ -36,6 +49,24 @@ const token = "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";
             console.error("Error:", error);
         }
     });
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+          document.getElementById('loader').style.display = 'none';
+          document.querySelector('main').style.display = 'block';
+        }, 2000);
+        document.getElementById('button').addEventListener('click', async function() {
+          document.getElementById('loadingText').style.display = 'block'; // Show loader
+          try {
+            const response = await query();
+            const objectURL = URL.createObjectURL(response);
+            image.src = objectURL; // Display generated image
+          } catch (error) {
+            console.error("Error:", error);
+          } finally {
+            document.getElementById('loadingText').style.display = 'none'; // Hide loader after query
+          }
+        });
+      });
     document.addEventListener("DOMContentLoaded", function() {
         const image = document.getElementById('image');
         const brightnessControl = document.getElementById('brightness');

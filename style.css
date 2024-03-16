@@ -13,6 +13,25 @@ body{
     
 
 }
+h1 {
+  visibility: hidden;
+  padding-right: 250px;
+}
+
+h1 span {
+  animation: appear 0.5s linear forwards;
+  visibility: hidden;
+  
+  opacity: 0; 
+  transition: opacity 0.5s; 
+}
+
+@keyframes appear {
+  to {
+    visibility: visible;
+    opacity: 1; 
+  }
+}
 .image-generator {
   height: 40vh;
   display: flex;
@@ -39,7 +58,7 @@ body{
   position: relative;
   color: #fff;
   padding: 0 15px;
-  max-width: 760px;
+  
   text-align: center;
 }
 
@@ -124,6 +143,7 @@ body{
 }
 
 .image-gallery .img-card {
+  margin-top: 20px;
   display: flex;
   position: relative;
   align-items: center;
@@ -137,6 +157,7 @@ body{
 }
 
 .image-gallery .img-card img {
+  
   height: 100%;
   width: 100%;
   border-radius: 20px;
@@ -144,6 +165,7 @@ body{
 }
 
 .image-gallery .img-card.loading img {
+
   width: 80px;
   height: 80px;
 }
@@ -181,9 +203,15 @@ body{
     padding-top: 30px;
     align-items: flex-start;
   }
-
+  .image-gallery .img-card {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+  }
   .image-generator h1 {
-    font-size: 1.8rem;
+    font-size: 2.8rem;
+    padding-right: 3.3vh;
   }
 
   .image-generator p {
@@ -222,12 +250,16 @@ body{
   .image-gallery .img-card:not(.loading) .download-btn {
     opacity: 1;
     pointer-events: auto;
+    
   }
 }
 
 @media screen and (max-width: 500px) {
   .image-gallery .img-card {
     width: 100%;
+    margin-top: 0;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
   }
 }
 @import url('https://fonts.googleapis.com/css?family=Nuto:400,700');
@@ -251,7 +283,7 @@ body {
     text-align: center;
     color: #fff;
     font-size: 80px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 
 label {
@@ -284,6 +316,7 @@ input[type="range"]:hover {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 #loader {
   align-items: center;
@@ -303,4 +336,39 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.img-card #image {
+  display: none;
+}
+
+.img-card .loading-text {
+  display: block;
+}
+
+.img-card #image {
+  display: block;
+}
+
+.img-card .loading-text {
+  display: none;
+}
+#imageContainer {
+  position: relative; /* Make sure the loader is positioned relative to the container */
+}
+
+#loadingText {
+  position: absolute; /* Position the loader absolutely within the container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make the loader the same width as the container */
+  height: 100%; /* Make the loader the same height as the container */
+  display: flex; /* Center the loading image */
+  justify-content: center;
+  align-items: center;
+}
+
+#loadingText img {
+  max-width: 100%; /* Make sure the loading image doesn't overflow the loader */
+  max-height: 100%;
 }
